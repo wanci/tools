@@ -19,7 +19,7 @@ class CAddEniThread(COpEniThread):
                         '9.8.9.0|24:8.8.0.0|16':{'value': '111'},
                         '10.2.1.0|24:10.24.0.0|16': {}
                         },  
-                    'root':"/TVPC/VM/1588/10.2.0.0|24/10.2.0.121",
+                    'root':"/1588/10.2.0.0|24/10.2.0.121",
                     },  
                 }   
         if b_add: return self.do_zoo_req(CZoobSetReqOp(), zoo_req)[0]
@@ -31,8 +31,7 @@ class CAddEniHandle(COpEniHandle):
 
 if __name__ == '__main__':
     data = {'detail':[
-        #{'vpcId':430,'owner':'12345678','subnetId':69,'name':'test','business':'111', 'state':1},
-        {'vpcId':1588,'owner':'wanci','subnetId':53,'name':'leohli','business':'leo', 'state':1},
+        {},
         ]}  
     handle = CAddEniHandle()
     handle.init(data)
